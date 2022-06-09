@@ -14,7 +14,7 @@ public class Exercise1 {
 		System.out.print("Enter radius: ");
 		radius = s.nextInt();
 		double area = Math.PI * Math.pow(radius, 2);
-		System.out.println("The area is: " + area);
+		System.out.printf("The area is: %f", area);
 
 		s.close();
 	}

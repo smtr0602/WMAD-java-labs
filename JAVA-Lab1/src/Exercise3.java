@@ -14,7 +14,7 @@ public class Exercise3 {
 		System.out.print("Enter a digit: ");
 		num = s.nextInt();
 		for (int i = 1; i <= 10; i++) {
-			System.out.println(num + "x" + i + "=" + (num * i));
+			System.out.printf("%d x %d = %d%n", num, i, num * i);
 		}
 
 		s.close();

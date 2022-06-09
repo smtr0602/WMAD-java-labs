@@ -15,7 +15,7 @@ public class Exercise2 {
 		cents = s.nextInt();
 		int convertedDollars = cents / 100;
 		int convertedCents = cents % 100;
-		System.out.println("The value is " + convertedDollars + " dollars and " + convertedCents + " cents ");
+		System.out.printf("The value is %d dollars and %d cents", convertedDollars, convertedCents);
 
 		s.close();
 	}
