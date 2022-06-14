@@ -28,4 +28,13 @@ public class Animal {
 	public String getBloodType() {
 		return this.bloodType;
 	}
+
+	@Override
+	public String toString() {
+		return "Animal [height=" + height + ", weight=" + weight + ", bloodType=" + bloodType + ", getHeight()="
+				+ getHeight() + ", getWeight()=" + getWeight() + ", getBloodType()=" + getBloodType() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	}
+	
+	
 }

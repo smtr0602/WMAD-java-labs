@@ -25,4 +25,13 @@ public class Reptile extends Animal {
 	public boolean getHasHardShelledEggs() {
 		return this.hasHardShelledEggs;
 	}
+
+	@Override
+	public String toString() {
+		return "Reptile [hasHardSkin=" + hasHardSkin + ", hasHardShelledEggs=" + hasHardShelledEggs
+				+ ", getHasHardSkin()=" + getHasHardSkin() + ", getHasHardShelledEggs()=" + getHasHardShelledEggs()
+				+ ", getHeight()=" + getHeight() + ", getWeight()=" + getWeight() + ", getBloodType()=" + getBloodType()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
 }

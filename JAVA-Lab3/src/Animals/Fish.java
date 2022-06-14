@@ -32,4 +32,15 @@ public class Fish extends Animal {
 	public boolean getIsEdible() {
 		return this.isEdible;
 	}
+
+	@Override
+	public String toString() {
+		return "Fish [size=" + size + ", livesInOcean=" + livesInOcean + ", isEdible=" + isEdible + ", getSize()="
+				+ getSize() + ", getLivesInOcean()=" + getLivesInOcean() + ", getIsEdible()=" + getIsEdible()
+				+ ", getHeight()=" + getHeight() + ", getWeight()=" + getWeight() + ", getBloodType()=" + getBloodType()
+				+ ", toString()=" + super.toString() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ "]";
+	}
+	
+	
 }

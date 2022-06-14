@@ -31,4 +31,14 @@ public class Bird extends Animal {
 	public boolean getLivesOnLand() {
 		return this.livesOnLand;
 	}
+
+	@Override
+	public String toString() {
+		return "Bird [size=" + size + ", canFly=" + canFly + ", livesOnLand=" + livesOnLand + ", getSize()=" + getSize()
+				+ ", getCanFly()=" + getCanFly() + ", getLivesOnLand()=" + getLivesOnLand() + ", getHeight()="
+				+ getHeight() + ", getWeight()=" + getWeight() + ", getBloodType()=" + getBloodType() + ", toString()="
+				+ super.toString() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
+	}
+	
+	
 }
