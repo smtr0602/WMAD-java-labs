@@ -1,4 +1,4 @@
-package composition;
+package oop.composition;
 
 public class App {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package polymorphism.shapes;
+package oop.polymorphism.shapes;
 
 public class Shape {
 	public double getArea() {
