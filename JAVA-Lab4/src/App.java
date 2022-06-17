@@ -31,8 +31,6 @@ public class App {
 		System.out.print("Please enter the second number: ");
 
 		double num = scanner.nextDouble();
-
-		System.out.print("Please enter aaa: ");
 		calc.setNum2(num);
 	}
 
