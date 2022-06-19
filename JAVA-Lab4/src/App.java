@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
@@ -21,32 +22,59 @@ public class App {
 	}
 
 	private static void handleFirstNum() {
+		boolean isValid = false;
 		System.out.print("Please enter the first number: ");
 
-		double num = scanner.nextDouble();
-		calc.setNum1(num);
+		while (!isValid) {
+			try {
+				double num = scanner.nextDouble();
+				isValid = true;
+				calc.setNum1(num);
+
+			} catch (InputMismatchException e) {
+				System.out.println("Enter in valid data type");
+				scanner.next();
+			}
+		}
 	}
 
 	private static void handleSecondNum() {
+		boolean isValid = false;
 		System.out.print("Please enter the second number: ");
 
-		double num = scanner.nextDouble();
-		calc.setNum2(num);
+		while (!isValid) {
+			try {
+				double num = scanner.nextDouble();
+				isValid = true;
+				calc.setNum2(num);
+
+			} catch (InputMismatchException e) {
+				System.out.println("Enter in valid data type");
+				scanner.next();
+			}
+		}
 	}
 
 	private static void handleOperator() {
+		boolean isValid = false;
 		System.out.println("Choose an operation:\n");
 
-		for (int i = 0; i < Calculator.operators.length; i++) {
-			System.out.printf("> Type %s for %s %n", Calculator.operators[i][0], Calculator.operators[i][1]);
+		while (!isValid) {
+			try {
+				for (int i = 0; i < Calculator.operators.length; i++) {
+					System.out.printf("> Type %s for %s %n", Calculator.operators[i][0], Calculator.operators[i][1]);
+				}
+				String operator = scanner.next();
+				if (!isValidOperator(operator)) {
+					throw new Exception();
+				}
+				isValid = true;
+				calc.setOperator(operator);
+
+			} catch (Exception e) {
+				System.out.println("Please enter valid operator! \n");
+			}
 		}
-		String operator = scanner.next();
-		if (!isValidOperator(operator)) {
-			System.out.println("Please enter valid operator! \n");
-			handleOperator();
-			return;
-		}
-		calc.setOperator(operator);
 	}
 
 	private static boolean isValidOperator(String operator) {
@@ -67,26 +95,35 @@ public class App {
 	}
 
 	private static void handleContinueOrExit(String message) {
+		boolean isValid = false;
 
-		// show message if exists
-		if (!message.equals("")) {
-			System.out.println(message);
+		while (!isValid) {
+			// show message if exists
+			if (!message.equals("")) {
+				System.out.println(message);
+			}
+
+			try {
+				System.out.println("Do you want to continue or quit?");
+				String input = scanner.next();
+
+				if (!(input.equals("continue") || input.equals("quit"))) {
+					throw new Exception();
+				} else if (input.equals("quit")) {
+					System.out.println("Bye bye!");
+
+					scanner.close();
+					System.exit(0);
+					return;
+				} else {
+					start();
+				}
+
+			} catch (Exception e) {
+				handleContinueOrExit("Enter 'continue or 'quit'");
+			}
 		}
 
-		System.out.println("Do you want to continue or quit?");
-		String input = scanner.next();
-
-		if (input.equals("continue")) {
-			start();
-			return;
-		} else if (input.equals("quit")) {
-			System.out.println("Bye bye!");
-
-			scanner.close();
-			System.exit(0);
-			return;
-		}
-		handleContinueOrExit("Enter 'continue or 'quit'");
 	}
 
 }
