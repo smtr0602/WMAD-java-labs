@@ -73,6 +73,7 @@ public class App {
 
 			} catch (Exception e) {
 				System.out.println("Please enter valid operator! \n");
+				scanner.next();
 			}
 		}
 	}
@@ -121,6 +122,7 @@ public class App {
 
 			} catch (Exception e) {
 				handleContinueOrExit("Enter 'continue or 'quit'");
+				scanner.next();
 			}
 		}
 
