@@ -45,6 +45,10 @@ public class App {
 		while (!isValid) {
 			try {
 				double num = scanner.nextDouble();
+				if (num == 0 && calc.getOperator().equals("/")) {
+					System.out.println("Cannot devide by zero!");
+					continue;
+				}
 				isValid = true;
 				calc.setNum2(num);
 
