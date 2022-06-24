@@ -20,7 +20,7 @@ public class Main {
 		list1.add(1);
 		list1.add(1);
 
-		System.out.println("list1: " + list1);
+		System.out.println("list1: " + list1); // list1: [1, 1, 1, 1]
 
 		// --------------------------------------------
 
@@ -34,7 +34,7 @@ public class Main {
 		hsList1.add(1);
 		hsList1.add(5);
 
-		System.out.println("hsList1: " + hsList1);
+		System.out.println("hsList1: " + hsList1); // hsList1: [1, 2, 3, 4, 5]
 
 		// --------------------------------------------
 
@@ -47,7 +47,7 @@ public class Main {
 		hsList2.add(1);
 		hsList2.add(5);
 
-		System.out.println("hsList2: " + hsList2);
+		System.out.println("hsList2: " + hsList2); // hsList2: [2, 3, 4, 1, 5]
 
 		// --------------------------------------------
 
@@ -107,7 +107,8 @@ public class Main {
 
 		for (Map.Entry<String, String> entry : dictionary2.entrySet()) {
 			System.out.println(entry.getKey() + ": " + entry.getValue());
-			//word1: some definition of word1...
+			// eating: something.....
+			// word1: some definition of word1...
 			// word2: some definition of word2...
 			// word3: some definition of word3...
 		}
