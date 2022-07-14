@@ -95,9 +95,9 @@ public class App {
 			while (resultSet.next()) {
 				String name = resultSet.getString("name");
 				String dept = resultSet.getString("dept");
-				String salary = resultSet.getString("salary");
+				int salary = resultSet.getInt("salary");
 
-				System.out.printf("%s - %s ($%s)\n", name, dept, salary);
+				System.out.printf("%s - %s ($%d)\n", name, dept, salary);
 				System.out.println("- - - - - - - - - - - - - - - - - - - - - - ");
 			}
 			System.out.println("===========================================\n");
