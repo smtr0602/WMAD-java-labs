@@ -30,7 +30,7 @@ public class EmployeeModel {
 		try {
 			Statement statement = conn.createStatement();
 
-			// Execute (insert)
+			// Execute (Select)
 			return statement.executeQuery("SELECT * FROM employee_tbl");
 
 		} catch (SQLException e) {
@@ -44,6 +44,7 @@ public class EmployeeModel {
 		int rowsAffected = 0;
 
 		try {
+			// Execute (Insert)
 			String query = "INSERT INTO employee_tbl (name, dept, salary) VALUES (?, ?, ?)";
 
 			PreparedStatement statement = conn.prepareStatement(query);
