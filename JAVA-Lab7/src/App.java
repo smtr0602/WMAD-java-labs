@@ -61,10 +61,10 @@ public class App {
 				System.out.println("\nPlease enter a name: ");
 				String name = scanner.nextLine();
 
-				System.out.printf("Please enter %s's department: \n", name);
+				System.out.printf("\nPlease enter %s's department: \n", name);
 				String dept = scanner.nextLine();
 
-				System.out.printf("Please enter %s's salary: \n", name);
+				System.out.printf("\nPlease enter %s's salary: \n", name);
 				int salary = scanner.nextInt();
 				scanner.nextLine();
 
@@ -76,7 +76,8 @@ public class App {
 				isValid = true;
 
 			} catch (InputMismatchException e) {
-				showError("Please enter in valid format");
+				showError("Please enter in valid format.. Please try again");
+				scanner.nextLine();
 				continue;
 			}
 		}
@@ -85,8 +86,9 @@ public class App {
 	private void showAllEmployees() {
 		try {
 			ResultSet resultSet = EmployeeModel.loadEmployees();
-			if (resultSet == null) {
+			if (resultSet == null || !resultSet.isBeforeFirst()) {
 				showError("No employee found..");
+				return;
 			}
 
 			System.out.println("===========================================");
