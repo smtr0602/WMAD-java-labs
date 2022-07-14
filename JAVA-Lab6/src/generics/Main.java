@@ -1,4 +1,4 @@
-package Generics;
+package generics;
 
 class Main {
 	public static void main(String[] args) {
@@ -6,12 +6,12 @@ class Main {
 		double num2 = MaximumTest.maximum(6.6, 8.9, 8.7);
 
 		// MaximumTest
-		System.out.printf("Max of %d, %d and %d is %d\n\n", 3, 4, 5, num1);
-		System.out.printf("Max of %.1f,%.1f and %.1f is %.1f\n\n", 6.6, 8.9, 8.7, num2);
+		System.out.printf("Max of %d, %d and %d is %d\n\n", 3, 8, 5, num1);
+		System.out.printf("Max of %.1f, %.1f and %.1f is %.1f\n\n", 6.6, 8.9, 8.7, num2);
 
 		// MaximumTest2
 		System.out.printf("Max of %d, %d and %d is %d\n\n", 3, 4, 5, MaximumTest2.maximum(3, 4, 5));
-		System.out.printf("Max of %.1f,%.1f and %.1f is %.1f\n\n", 6.6, 8.9, 8.7, MaximumTest2.maximum(6.6, 8.9, 8.7));
+		System.out.printf("Max of %.1f, %.1f and %.1f is %.1f\n\n", 6.6, 8.9, 8.7, MaximumTest2.maximum(6.6, 8.9, 8.7));
 	}
 }
 
